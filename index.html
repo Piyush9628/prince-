@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Vaishnavi ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #e8d5ff, #fff0f5);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #63334d;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 25px 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: appear 0.7s ease;
+}
+
+.page.active {
+    display: flex;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 43px);
+    margin: 15px;
+    color: #e84378;
+}
+
+h2 {
+    color: #d63384;
+    margin: 15px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 12px auto;
+}
+
+.card {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    border: 2px solid white;
+    border-radius: 28px;
+    padding: 30px 22px;
+    width: min(95%, 650px);
+    box-shadow: 0 10px 35px rgba(214, 51, 132, 0.18);
+}
+
+.anime {
+    font-size: 85px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+button {
+    border: none;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.next {
+    background: #ff4f91;
+    color: white;
+    box-shadow: 0 5px 15px #ffb6d0;
+}
+
+.yes {
+    background: #ff4f91;
+    color: white;
+}
+
+.no {
+    background: #777;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    min-height: 75px;
+    position: relative;
+}
+
+#noBtn {
+    position: relative;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    pointer-events: none;
+    animation: floatUp 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.gif {
+    width: 160px;
+    max-width: 70%;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.shayari {
+    font-size: 20px;
+    color: #b83280;
+    font-weight: 600;
+    line-height: 2;
+    background: #fff0f6;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.small {
+    font-size: 14px;
+    color: #95677e;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+<div id="hearts"></div>
+
+<!-- PAGE 1: WELCOME -->
+<section class="page active" id="page1">
+<div class="card">
+
+    <div class="anime">🌸 🥰</div>
+
+    <h1>Hey Vaishnavi! 💗</h1>
+
+    <p>
+        Someone has prepared a little surprise
+        especially for you...
+    </p>
+
+    <p>But before that, promise me you'll smile! 😊</p>
+
+    <img class="gif"
+    src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+    alt="Cute cat animation">
+
+    <h2>Are You Ready? 🎀</h2>
+
+    <button class="next" onclick="go(2)">
+        Let's Start 💕 →
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 2: FUNNY PAGE -->
+<section class="page" id="page2">
+<div class="card">
+
+    <div class="anime">😂 🤣</div>
+
+    <h1>Wait Wait Vaishnavi! 😜</h1>
+
+    <h2>Some Important Questions!</h2>
+
+    <p>1. Do you believe in love at first sight? 👀</p>
+    <p>2. Do you believe in magic? ✨</p>
+    <p>3. Do you believe that someone can smile
+    just by seeing your name? 🙈</p>
+
+    <div class="shayari">
+        Breaking News! 📰<br>
+        A girl named Vaishnavi has been
+        accused of stealing someone's attention! 😂❤️
+    </div>
+
+    <p>And the investigation is still going on! 🤭</p>
+
+    <button class="next" onclick="go(3)">
+        Okay, What's Next? 😁
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 3: PROPOSAL MESSAGE -->
+<section class="page" id="page3">
+<div class="card">
+
+    <div class="anime">💗 🧸</div>
+
+    <h1>Something From My Heart 💌</h1>
+
+    <p>
+        Dear Vaishnavi,
+        <br><br>
+        I don't know exactly when it happened,
+        but somewhere along the way, you became
+        someone really special to me.
+        <br><br>
+        Your smile can make an ordinary day
+        feel extraordinary. Your presence makes
+        little moments more beautiful.
+        <br><br>
+        I don't promise to be perfect, but I would
+        love to make you smile, support you,
+        respect you and create beautiful memories
+        together.
+        <br><br>
+        So today, I have a little question
+        for you... ❤️
+    </p>
+
+    <div class="anime">🌹 💝 🌹</div>
+
+    <button class="next" onclick="go(4)">
+        Reveal The Question 💕
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 4: MAIN PROPOSAL -->
+<section class="page" id="page4">
+<div class="card">
+
+    <div class="anime">🥺 ❤️</div>
+
+    <h1>Vaishnavi...</h1>
+
+    <h2>Will You Be My Heartbeat? 💓</h2>
+
+    <p>
+        Will you be my girlfriend
+        and make this little story more beautiful? 🌷
+    </p>
+
+    <div class="buttons" id="proposalButtons">
+
+        <button class="yes" onclick="go(5)">
+            YES! ❤️
+        </button>
+
+        <button class="no" id="noBtn">
+            NO 🙈
+        </button>
+
+    </div>
+
+    <p class="small">
+        Choose whatever feels right. No pressure! 💗
+    </p>
+
+</div>
+</section>
+
+
+<!-- PAGE 5: ACCEPTANCE -->
+<section class="page" id="page5">
+<div class="card">
+
+    <div class="anime">😭😍🎉</div>
+
+    <h1>OMG!!! SHE SAID YES! ❤️</h1>
+
+    <h2>Best Day Ever!!! 🥳</h2>
+
+    <p>
+        I am literally the happiest person right now! 😂
+        <br><br>
+        I knew you had a little YES hidden somewhere
+        in that beautiful heart! 🤭
+        <br><br>
+        Okay, okay... I won't tease you anymore!
+        <br><br>
+        Thank you for making this moment special.
+        Here's to lots of smiles, laughter,
+        respect and beautiful memories! 💕
+    </p>
+
+    <div class="anime">🧸💐💖</div>
+
+    <button class="next" onclick="go(6)">
+        One More Surprise! 🎁
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 6: SURPRISE QUESTION -->
+<section class="page" id="page6">
+<div class="card">
+
+    <div class="anime">🎁 🥰</div>
+
+    <h1>Hey Vaishnavi! 💗</h1>
+
+    <h2>I Have A Surprise For You! 🎀</h2>
+
+    <p>
+        Something sweet, something special,
+        and something made just for you!
+    </p>
+
+    <h2>Are You Excited To See It? 👀</h2>
+
+    <div class="buttons" id="surpriseButtons">
+
+        <button class="yes" onclick="go(7)">
+            YES! 😍
+        </button>
+
+        <button class="no" id="noBtn2">
+            NO 😜
+        </button>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- PAGE 7: BEAUTIFUL COMPLIMENTS -->
+<section class="page" id="page7">
+<div class="card">
+
+    <div class="anime">🌙 🥹 💗</div>
+
+    <h1>For The Most Special Girl! 🌷</h1>
+
+    <p>
+        Vaishnavi, they say the moon is beautiful,
+        but I think the moon is just a small piece
+        of your beauty. 🌙
+        <br><br>
+        You are not just beautiful because of
+        your appearance, but also because of
+        the kindness, happiness and positivity
+        you bring into little moments.
+        <br><br>
+        If I could make one wish every day,
+        it would be to see you smile.
+        <br><br>
+        If beauty had a notification,
+        the universe would send an alert
+        every time you entered a room! 😂
+        <br><br>
+        And honestly, even Google would struggle
+        to find words to describe how special you are! ❤️
+    </p>
+
+    <div class="anime">🌹 🧸 🌹</div>
+
+    <button class="next" onclick="go(8)">
+        Final Surprise 💌
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 8: CLOSING AND SHAYARI -->
+<section class="page" id="page8">
+<div class="card">
+
+    <div class="anime">💖 🌸 💖</div>
+
+    <h1>Just For You, Vaishnavi! ❤️</h1>
+
+    <h2>A Little Shayari 🌙</h2>
+
+    <div class="shayari">
+        चाँद से रोशनी उधार नहीं लेते,<br>
+        तेरी मुस्कान से ही दिन सजा लेते हैं।<br><br>
+
+        लफ़्ज़ कम पड़ जाते हैं तारीफ़ में तेरी,<br>
+        हम तो बस तुझे देखकर मुस्कुरा लेते हैं। ❤️
+    </div>
+
+    <p>
+        Thank you for being part of this little
+        surprise!
+        <br><br>
+        May your smile always shine,
+        your dreams always fly high,
+        and your life always be filled with happiness. 🌸
+    </p>
+
+    <div class="anime">🫶 🥰 💝</div>
+
+    <h2>With Lots Of Smiles & Love! 💗</h2>
+
+    <p>Made Especially For Vaishnavi 🎀</p>
+
+    <button class="next" onclick="go(1)">
+        Watch Again ↻
+    </button>
+
+</div>
+</section>
+
+
+<script>
+
+// PAGE NAVIGATION
+function go(pageNumber) {
+
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page' + pageNumber)
+        .classList.add('active');
+
+    window.scrollTo(0, 0);
+}
+
+
+// RUNNING NO BUTTON
+function makeNoMove(buttonId, containerId) {
+
+    const noButton = document.getElementById(buttonId);
+    const container = document.getElementById(containerId);
+
+    function moveButton() {
+
+        const maxX = Math.max(
+            0, container.clientWidth - noButton.offsetWidth
+        );
+
+        const maxY = Math.max(
+            0, container.clientHeight - noButton.offsetHeight
+        );
+
+        noButton.style.position = "absolute";
+        noButton.style.left = Math.random() * maxX + "px";
+        noButton.style.top = Math.random() * maxY + "px";
+    }
+
+    noButton.addEventListener("mouseenter", moveButton);
+
+    noButton.addEventListener("click", moveButton);
+
+    noButton.addEventListener("touchstart", function(e) {
+        e.preventDefault();
+        moveButton();
+    }, { passive: false });
+}
+
+makeNoMove("noBtn", "proposalButtons");
+makeNoMove("noBtn2", "surpriseButtons");
+
+
+// FLOATING HEART ANIMATION
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const emojis = ["❤️", "💕", "💗", "🌸", "💖", "✨"];
+
+    heart.innerHTML =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+}
+
+setInterval(createHeart, 450);
+
+</script>
+
+</body>
+</html>
